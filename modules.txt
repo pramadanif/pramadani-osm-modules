@@ -1,0 +1,7 @@
+# One module per line: its folder inside the logos-osm-distribution submodule.
+# The core modules come first; the app and templates depend on them.
+submodules/logos-osm-distribution/basecamp/osm-sdk
+submodules/logos-osm-distribution/basecamp/osm-distribution
+submodules/logos-osm-distribution/basecamp/osm-app
+submodules/logos-osm-distribution/examples/consumer-module
+submodules/logos-osm-distribution/examples/distribution-consumer-app

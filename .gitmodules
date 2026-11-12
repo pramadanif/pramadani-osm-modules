@@ -16,3 +16,6 @@
 ; After cloning a fork, materialise the submodule working trees with:
 ;
 ;   git submodule update --init --recursive
+[submodule "submodules/logos-osm-distribution"]
+	path = submodules/logos-osm-distribution
+	url = https://github.com/pramadanif/logos-osm-distribution

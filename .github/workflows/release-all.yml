@@ -27,6 +27,8 @@ permissions:
 
 jobs:
   discover:
+    # This catalog's modules live in subfolders of one submodule (logos-osm-distribution), so the
+    # list comes from modules.txt, not from the submodule paths in .gitmodules.
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.scan.outputs.matrix }}
@@ -37,21 +39,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Every `path = submodules/<repo>` entry in .gitmodules.
-          paths="$(git config --file .gitmodules --get-regexp 'submodule\..*\.path$' 2>/dev/null \
-                   | awk '{print $2}' | sort -u || true)"
-          if [ -z "${paths}" ]; then
-            echo 'matrix={"module_path":[]}' >> "$GITHUB_OUTPUT"
-            echo 'count=0' >> "$GITHUB_OUTPUT"
-            echo "No submodules declared in .gitmodules — nothing to release."
-            exit 0
-          fi
+          paths="$(grep -vE '^\s*(#|$)' modules.txt)"
           matrix="$(printf '%s\n' ${paths} | jq -R . | jq -cs '{module_path: .}')"
           count="$(printf '%s\n' ${paths} | wc -l | tr -d ' ')"
           echo "matrix=${matrix}" >> "$GITHUB_OUTPUT"
           echo "count=${count}"  >> "$GITHUB_OUTPUT"
-          echo "Discovered ${count} module(s):"
-          printf '  %s\n' ${paths}
+          echo "Modules (${count}):"; printf '  %s\n' ${paths}
 
   release:
     needs: discover
