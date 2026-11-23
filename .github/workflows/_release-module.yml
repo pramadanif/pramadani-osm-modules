@@ -12,8 +12,8 @@ name: _release-module
 # `uses: ./.github/workflows/_release-module.yml`.
 #
 # ── Signing modes ────────────────────────────────────────────────────
-# This catalog publishes UNSIGNED (`signing_mode: none`) — matching the
-# empty `trustedSigners` in logos-repo.json. Turn on signing when ready:
+# This catalog signs inline: `lgx sign` runs with the LOGOS_SIGNING_KEY secret and the
+# matching DID is the only entry of `trustedSigners` in logos-repo.json. The modes are:
 #
 #   inline   — `lgx sign` runs in the workflow using a JWK secret.
 #              1. Generate an Ed25519 JWK private key.
@@ -57,9 +57,9 @@ jobs:
     with:
       module_path: ${{ inputs.module_path }}
 
-      # Normal runs skip a version that's already fully published; "Force
-      # build" (force_build: true) republishes it by disabling that skip.
-      skip_if_published: ${{ !inputs.force_build }}
+      # A published version is never rebuilt or replaced (freeze rule: the evaluated build is
+      # identified by its rootHash); changes ship as a new version. force_build is ignored.
+      skip_if_published: true
 
       # ─── Variants (edit here, not in each caller) ───────────────────
       # windows-x86_64 is a mingw CROSS build — an ordinary Linux runner
@@ -79,11 +79,7 @@ jobs:
       cache_environment: ${{ vars.ATTIC_ENDPOINT && 'public-cache' || '' }}
 
       # ─── Signing mode (edit here, not in each caller) ────────────────
-      signing_mode: none
-
-      # Inline signing — uncomment this line (and `signing_key:` at the
-      # bottom), then delete `signing_mode: none` above.
-      #signing_mode: inline
+      signing_mode: inline
 
       # External signing (Jenkins / HSM / hardware token). Uncomment and
       # delete `signing_mode: none`. `signing_command` runs with
@@ -106,6 +102,5 @@ jobs:
       # environment secret whose name its caller passed.
       ATTIC_TOKEN_CI: ${{ secrets.ATTIC_TOKEN_CI }}
       ATTIC_TOKEN_PUBLIC: ${{ secrets.ATTIC_TOKEN_PUBLIC }}
-      # Inline mode reads this; none/external ignore it. Uncomment for
-      # inline mode.
-      #signing_key: ${{ secrets.LOGOS_SIGNING_KEY }}
+      # Inline mode reads this; none/external ignore it.
+      signing_key: ${{ secrets.LOGOS_SIGNING_KEY }}

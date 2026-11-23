@@ -5,5 +5,7 @@
   "description": "OpenStreetMap snapshots on Logos (LP-0018): the pramadani_osm_distribution core module, the read-only pramadani_osm_sdk module, the pramadani_osm_app Basecamp app and two templates.",
   "homepage": "https://github.com/pramadanif/logos-osm-distribution",
   "indexUrl": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/index/index.json",
-  "trustedSigners": []
+  "trustedSigners": [
+    "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ"
+  ]
 }
