@@ -32,18 +32,18 @@ jobs:
   validate:
     runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       # Pinned to the same major tag the release workflows use, so the
       # checker and the index builder cannot drift apart.
       - name: Check out the catalog tool
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           repository: logos-co/logos-modules-release-tool
           ref: v1
           path: _tool
 
-      - uses: cachix/install-nix-action@v27
+      - uses: cachix/install-nix-action@ba0dd844c9180cbf77aa72a116d6fbc515d0e87b # v27
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 

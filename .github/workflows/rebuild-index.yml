@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   rebuild:
-    uses: logos-co/logos-modules-release-action/.github/workflows/rebuild-index.yml@v1
+    uses: logos-co/logos-modules-release-action/.github/workflows/rebuild-index.yml@bbdc52871dc4305c8007923e1b08738ad2dd6b50 # v1
     with:
       # Unset means GitHub-hosted; see "Runners and the Nix cache" in the README.
       runner: ${{ vars.RELEASE_RUNNER }}
