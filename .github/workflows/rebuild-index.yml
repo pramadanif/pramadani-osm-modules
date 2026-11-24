@@ -1,12 +1,15 @@
 name: Rebuild index
 
-# Regenerates the rolling `index` release (index.json — the catalog
-# clients fetch) whenever a per-module release fires the
-# `rebuild-index` repository_dispatch event. Also runs on a six-hourly
-# schedule as a catch-up so a missed dispatch can't strand the catalog,
-# and can be kicked manually from the Actions UI.
+# Regenerates index.json (the catalog clients fetch) whenever a per-module release fires the
+# `rebuild-index` repository_dispatch event, every six hours as a catch-up, and on demand.
 #
-# Thin passthrough to the versioned action — nothing to configure here.
+# This repository has immutable releases (lambda-prize PR 189): a published release can no longer
+# change, and that includes the rolling `index` release the upstream workflow rewrites, which
+# GitHub locked as soon as it was edited. So the index is published to the `catalog-index`
+# branch instead, and logos-repo.json's indexUrl points there. The steps that collect the .lgx
+# URLs and build index.json are those of logos-modules-release-action's rebuild-index.yml at
+# bbdc528; only the publishing step differs. Every package stays in its own immutable release,
+# and clients check each download against the rootHash and signature in the index.
 
 on:
   workflow_dispatch: {}
@@ -15,13 +18,78 @@ on:
   schedule:
     - cron: '17 */6 * * *'
 
-# Forked repos default to a read-only GITHUB_TOKEN.
+concurrency:
+  group: rebuild-index-${{ github.repository }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   rebuild:
-    uses: logos-co/logos-modules-release-action/.github/workflows/rebuild-index.yml@bbdc52871dc4305c8007923e1b08738ad2dd6b50 # v1
-    with:
-      # Unset means GitHub-hosted; see "Runners and the Nix cache" in the README.
-      runner: ${{ vars.RELEASE_RUNNER }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: cachix/install-nix-action@3dc140bfc76c49fbd4dd958429132e3746bcb086 # v31
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: Set up lgx CLI (logos-package pinned)
+        run: |
+          set -euo pipefail
+          nix build github:logos-co/logos-package/4bdd9041ebfbd06c2b22134afdcd27fce8a43f3c#lgx --out-link "$RUNNER_TEMP/lgx-tool"
+          echo "$RUNNER_TEMP/lgx-tool/bin" >> "$GITHUB_PATH"
+      - name: Checkout logos-modules-release-tool (for index.py)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: logos-co/logos-modules-release-tool
+          ref: 94462e6633f2b536424c10ceda3c371f7ec8e09d # v1.3
+          path: _tool
+      - name: Collect `.lgx` URLs from this repo's releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          : > lgx.txt
+          : > urls.txt
+          gh api "repos/${{ github.repository }}/releases" --paginate \
+            --jq '.[] | select(.draft != true) | select(.tag_name != "index") | .id' |
+          while read -r release_id; do
+            gh api "repos/${{ github.repository }}/releases/${release_id}/assets" --paginate \
+              --jq '.[] | select(.state == "uploaded") | select(.name | endswith(".lgx")) | .browser_download_url' >> lgx.txt
+          done
+          while read -r lgx_url; do
+            sidecar_url="${lgx_url%/*}/sidecar.json"
+            if ! sidecar=$(curl -fsSL "$sidecar_url"); then
+              echo "::warning::cannot read $sidecar_url, listing $lgx_url without a CID"
+              sidecar=""
+            fi
+            if [[ -n "$sidecar" ]]; then
+              cid=$(jq -r '.cid' <<<"$sidecar")
+              for network in $(jq -r '.networks // [] | .[]' <<<"$sidecar"); do
+                echo -n "logos:$network:$cid " >> urls.txt
+              done
+            fi
+            echo "$lgx_url" >> urls.txt
+          done < lgx.txt
+          echo "::notice::collected $(wc -l < urls.txt) .lgx URL(s) from releases"
+      - name: Build index.json
+        run: |
+          set -euo pipefail
+          python3 _tool/index.py build urls.txt -o index.json --icons-dir ""
+          jq '{ schemaVersion, repositoryName, packageCount: (.packages | length) }' index.json
+      - name: Publish index.json and icons to the catalog-index branch
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/catalog-index"
+          mkdir -p "$out"
+          cp index.json "$out/"
+          find . -maxdepth 1 -name '*.png' -exec cp {} "$out/" \;
+          cd "$out"
+          git init -q -b catalog-index
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "index.json from run ${{ github.run_id }} at ${{ github.sha }}"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" catalog-index
+          echo "::notice::published index.json ($(jq '.packages | length' index.json) packages) to catalog-index"
