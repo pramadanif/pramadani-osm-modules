@@ -6,6 +6,9 @@
   "homepage": "https://github.com/pramadanif/logos-osm-distribution",
   "indexUrl": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/index/index.json",
   "trustedSigners": [
-    "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ"
+    {
+      "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+      "name": "pramadani-osm-modules release signer"
+    }
   ]
 }

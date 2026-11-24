@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           repository: logos-co/logos-modules-release-tool
-          ref: v1
+          ref: 0d7ba719aad28a6d6aab1a39674d7df49384e327 # v1
           path: _tool
 
       - uses: cachix/install-nix-action@ba0dd844c9180cbf77aa72a116d6fbc515d0e87b # v27
