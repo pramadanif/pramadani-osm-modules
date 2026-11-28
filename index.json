@@ -1,0 +1,805 @@
+{
+  "schemaVersion": 2,
+  "repositoryName": "pramadani-osm-modules",
+  "generatedAt": "2026-11-28T20:16:17Z",
+  "packages": [
+    {
+      "name": "pramadani_osm_sdk",
+      "versions": [
+        {
+          "releasedAt": "2026-11-27T12:35:59Z",
+          "publisherRef": "pramadani_osm_sdk-v0.1.3",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.3/pramadani_osm_sdk-0.1.3.lgx",
+          "size": 13284135,
+          "sha256": "62af08f4dccaff52872fc803be7ce0a86d58b21bebe8ac6a6f4b8a3cbe962a22",
+          "rootHash": "31ade9e8ab3c08c96be1395149a99c7c664d5f0c47e085f9fbc5b6649118b7eb",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Read-only OSM registry SDK for other Basecamp modules: discover regions, resolve a region to its CID and metadata, download and verify it. No wallet, no writes (LP-0018 consumer subset).",
+            "display_name": "OSM Registry SDK (LP-0018)",
+            "hashes": {
+              "assets": "6d15a84942460118aa0d8c910f6d57cdde6ad049db6f01cd27481195a1d80615",
+              "root": "31ade9e8ab3c08c96be1395149a99c7c664d5f0c47e085f9fbc5b6649118b7eb",
+              "variants": "a258a221e69e0d001d4aa59cb6d6dfd39f3dd96230db976963f694f15b5cd1e6",
+              "variants/darwin-arm64": "b4f6d203eaecb3abe802494049ad382252924064085ef79a8f3e3e1114dc748d",
+              "variants/linux-amd64": "9f1fb8771005784f25038ee25bfa65caad6fa9f75f6cddd8af62d900e9b471a6"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_sdk_plugin.dylib",
+              "linux-amd64": "pramadani_osm_sdk_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_sdk",
+            "type": "core",
+            "version": "0.1.3"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+            "linkedDids": [],
+            "signature": "nYtAzBVIB5QMcQDeVv9W7HG7zqdv5vVU3I/SK/F1ORKm2ZIgocpX4a7WYfDMj3kWcuYE8M3cIsMcDZj82JosDw==",
+            "signer": {},
+            "version": 1
+          },
+          "icon": {
+            "path": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487.png",
+            "sha256": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487",
+            "size": 12063
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.3/pramadani_osm_sdk-0.1.3.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T07:50:42Z",
+          "publisherRef": "pramadani_osm_sdk-v0.1.2",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.2/pramadani_osm_sdk-0.1.2.lgx",
+          "size": 13251932,
+          "sha256": "fa958406628430dc0c528cfe542499918c7f6108ed64c09fc3b0b754756392a6",
+          "rootHash": "addf8f6332a22f6079cfc083767ecfb2a76cb7e7286ffede0382c5ae5916c29b",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Read-only OSM registry SDK for other Basecamp modules: discover regions, resolve a region to its CID and metadata, download and verify it. No wallet, no writes (LP-0018 consumer subset).",
+            "display_name": "OSM Registry SDK (LP-0018)",
+            "hashes": {
+              "assets": "11932b8d241856ef7454239a13d6ddefab21d7012fc33f7715dbf6dce437d7b7",
+              "root": "addf8f6332a22f6079cfc083767ecfb2a76cb7e7286ffede0382c5ae5916c29b",
+              "variants": "ef767b503d65a34d17a11590c06322313292c99db36414ec754354671bcca5bf",
+              "variants/darwin-arm64": "49ab0192b97294d376d37f60d2ba7a13fe24218d446db7752fb3a84fb3130361",
+              "variants/linux-amd64": "e28125e1849f9364bb3036a77274861ad0f3573a61f69d225caabb71f13bc793"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_sdk_plugin.dylib",
+              "linux-amd64": "pramadani_osm_sdk_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_sdk",
+            "type": "core",
+            "version": "0.1.2"
+          },
+          "icon": {
+            "path": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487.png",
+            "sha256": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487",
+            "size": 12063
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.2/pramadani_osm_sdk-0.1.2.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T06:21:12Z",
+          "publisherRef": "pramadani_osm_sdk-v0.1.1",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.1/pramadani_osm_sdk-0.1.1.lgx",
+          "size": 13227065,
+          "sha256": "43334d99d88af023fab1420c6124dd68e78f86d80d1622c6bbaa340ddd8c2781",
+          "rootHash": "d8a66ace9a2b49c39bbba1954aa5e3c2aeeef89e4676953d7625125f316c5e49",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Read-only OSM registry SDK for other Basecamp modules: discover regions, resolve a region to its CID and metadata, download and verify it. No wallet, no writes (LP-0018 consumer subset).",
+            "display_name": "OSM Registry SDK (LP-0018)",
+            "hashes": {
+              "assets": "a05ac2688590f5841edeca55148bc091da06679ac0f8a4922911f0c3c404fbe7",
+              "root": "d8a66ace9a2b49c39bbba1954aa5e3c2aeeef89e4676953d7625125f316c5e49",
+              "variants": "7e2c9e27034917e6bc57bc57a28005d5a9d3b4ccc7dce49c3ee18648965d6cb8",
+              "variants/darwin-arm64": "168597cdc95617ee29f24f5294154ee3e501e03064f37b8f5d4677407b16ee39",
+              "variants/linux-amd64": "c26982a5e732f026bc94a924197e58fa35af03a5faf9bc20dd20eaf6d597467a"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_sdk_plugin.dylib",
+              "linux-amd64": "pramadani_osm_sdk_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_sdk",
+            "type": "core",
+            "version": "0.1.1"
+          },
+          "icon": {
+            "path": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487.png",
+            "sha256": "3e2a172e0078d716169aefd72fbd76c462616e223b80ee2115e290335e1f5487",
+            "size": 12063
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.1/pramadani_osm_sdk-0.1.1.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T04:04:01Z",
+          "publisherRef": "pramadani_osm_sdk-v0.1.0",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.0/pramadani_osm_sdk-0.1.0.lgx",
+          "size": 13215419,
+          "sha256": "192875d04842259cff9efc791431928b987fa7f02780c8625ee3425d74f35c6e",
+          "rootHash": "09b1c6f952ffee5604ff9b85577d2f61f79715e4068395b09a95953b6c92299c",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Read-only OSM registry SDK for other Basecamp modules: discover regions, resolve a region to its CID and metadata, download and verify it. No wallet, no writes (LP-0018 consumer subset).",
+            "display_name": "OSM Registry SDK (LP-0018)",
+            "hashes": {
+              "assets": "45f94dcb7fa753a260fda0c003f0afb12c18c8df8622ab29b0931c2dab50beba",
+              "root": "09b1c6f952ffee5604ff9b85577d2f61f79715e4068395b09a95953b6c92299c",
+              "variants": "000a86642865ac7134742a212e0c0891313d977eb4c6aadbe5e89d6b1d33d60a",
+              "variants/darwin-arm64": "8b78416af9b5b057e3666f50b34821d23d2a28aa1ef90e23b9806d6b9b31c243",
+              "variants/linux-amd64": "d1641e491e8b11408bdf34fbe39968d1d1ea2a16afa4f1703da7cedcb5f4bb75"
+            },
+            "icon": "",
+            "main": {
+              "darwin-arm64": "pramadani_osm_sdk_plugin.dylib",
+              "linux-amd64": "pramadani_osm_sdk_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_sdk",
+            "type": "core",
+            "version": "0.1.0"
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_sdk-v0.1.0/pramadani_osm_sdk-0.1.0.lgx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pramadani_osm_distribution",
+      "versions": [
+        {
+          "releasedAt": "2026-11-27T12:38:29Z",
+          "publisherRef": "pramadani_osm_distribution-v0.1.3",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.3/pramadani_osm_distribution-0.1.3.lgx",
+          "size": 13573132,
+          "sha256": "30ec1d494cdc723e9714cff0d138410b62cea8f775dfaa4f6fb2b1895320b87b",
+          "rootHash": "67a75247c63c6c66d40a277c771cd87407bf0b7bae6612fccb13a3dcb2fac564",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Find, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Distribution (LP-0018)",
+            "hashes": {
+              "assets": "cb0f509f269d7cb9b319a26d69a3aab06dbc1e30ec0789d5aaad9be6cbf69ae3",
+              "root": "67a75247c63c6c66d40a277c771cd87407bf0b7bae6612fccb13a3dcb2fac564",
+              "variants": "7cbf3e1622afbe9ed3b16a037f1288a288517ce52bef3ca26aa642de04f21a20",
+              "variants/darwin-arm64": "a2517540149b8c590b8fb61d791c8f290fe60bdb463c7e33380c09eef9437157",
+              "variants/linux-amd64": "68a1246bf52888edbf64eb74b643350a9219f54d468edcfe09da76ede873fc8f"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_distribution_plugin.dylib",
+              "linux-amd64": "pramadani_osm_distribution_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_distribution",
+            "optional_dependencies": [
+              "lez_core"
+            ],
+            "type": "core",
+            "version": "0.1.3"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+            "linkedDids": [],
+            "signature": "8Zs8et6fuzUrauwnaL+BcJBkv6ZmzrkrRm3ukPfh/7fnAg/XBUSpNm3bm5MgCMuOjKXJ/ptzvrw8G8ZO5bEfAg==",
+            "signer": {},
+            "version": 1
+          },
+          "icon": {
+            "path": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69.png",
+            "sha256": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69",
+            "size": 14052
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.3/pramadani_osm_distribution-0.1.3.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T07:57:02Z",
+          "publisherRef": "pramadani_osm_distribution-v0.1.2",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.2/pramadani_osm_distribution-0.1.2.lgx",
+          "size": 13529634,
+          "sha256": "a2a36cd48cd2d67895b3a15a6131d1cfafdac40995cc2884deacb38d917210a9",
+          "rootHash": "abd8b56f54df2c87e03dbc7a32f08ec09b460d2f8f813fdf450da52a7f400219",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Find, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Distribution (LP-0018)",
+            "hashes": {
+              "assets": "f1e4a932232a8e751056d559b6f83dbdf859d2ea8db332dd7781525c2c6c42d1",
+              "root": "abd8b56f54df2c87e03dbc7a32f08ec09b460d2f8f813fdf450da52a7f400219",
+              "variants": "17e984c1c28bc04a235417635020d931e7a6f4d3d8dcaf4c55ea0b281d1e1c6e",
+              "variants/darwin-arm64": "8142f8671b6d0231b746d426ea38f89c4251ac2922616a4c8e7f3151e240f888",
+              "variants/linux-amd64": "044f3b04d48884c8977f7c663cac8eb91e22038b477f9b357319211bbd8a0809"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_distribution_plugin.dylib",
+              "linux-amd64": "pramadani_osm_distribution_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_distribution",
+            "optional_dependencies": [
+              "lez_core"
+            ],
+            "type": "core",
+            "version": "0.1.2"
+          },
+          "icon": {
+            "path": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69.png",
+            "sha256": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69",
+            "size": 14052
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.2/pramadani_osm_distribution-0.1.2.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T06:21:32Z",
+          "publisherRef": "pramadani_osm_distribution-v0.1.1",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.1/pramadani_osm_distribution-0.1.1.lgx",
+          "size": 13504414,
+          "sha256": "5550032e52f6d079c6d99d91c6f723a75fa2397ea42dad6a64feee04bc7c91d9",
+          "rootHash": "34cb0cb8d699f9ceeeffc9b6329bab414cdd6f7758547b0710d7ed5bc25f6265",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Find, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Distribution (LP-0018)",
+            "hashes": {
+              "assets": "20789f0f6138c966fcbca881099458096ec39c6047eb19d51c739229fb2783f2",
+              "root": "34cb0cb8d699f9ceeeffc9b6329bab414cdd6f7758547b0710d7ed5bc25f6265",
+              "variants": "057e5f81f9d1907cdb827e2009005640175cf964a6880964af5f13e0e66e041a",
+              "variants/darwin-arm64": "c4f345ec1124616fb12cca0a85b4eee1a97dc1e587960e407b3a7197227e4c03",
+              "variants/linux-amd64": "e07e74bb7af90129b97aa2de08b7a1ebda4f2446bc4e1e58dfb8745682be943c"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_distribution_plugin.dylib",
+              "linux-amd64": "pramadani_osm_distribution_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_distribution",
+            "optional_dependencies": [
+              "lez_core"
+            ],
+            "type": "core",
+            "version": "0.1.1"
+          },
+          "icon": {
+            "path": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69.png",
+            "sha256": "8ba0e255d4c104cfe549ffa6882892d751ead6e966c7d1e815278d453482be69",
+            "size": 14052
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.1/pramadani_osm_distribution-0.1.1.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T04:05:27Z",
+          "publisherRef": "pramadani_osm_distribution-v0.1.0",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.0/pramadani_osm_distribution-0.1.0.lgx",
+          "size": 13485452,
+          "sha256": "227b30bee1282587246b83cb772c69229bef8c7be9671a39cdaed7b9fd957e21",
+          "rootHash": "5ff2cfbed15fa3d4d312034baa82de0e4ca23ff30fec3359aa8e69d067c8e5eb",
+          "manifest": {
+            "author": "pramadanif",
+            "category": "maps",
+            "dependencies": [],
+            "description": "Find, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Distribution (LP-0018)",
+            "hashes": {
+              "assets": "a2797428ba3864cf18bd1d1d20b4c1b1665e58338fa8f471b29aa6e3189f9a3d",
+              "root": "5ff2cfbed15fa3d4d312034baa82de0e4ca23ff30fec3359aa8e69d067c8e5eb",
+              "variants": "d7ca2aad7c3167108817d022078e834f56c0bff61dc617cc0642d4b534846f72",
+              "variants/darwin-arm64": "181ed8622494d3599830d3ac11d06cdfa620ad8591a450bb08bf8531e97b6119",
+              "variants/linux-amd64": "6fc0ae5a66b060a4644750cfa0632bec202c59db9d80340358fd7dbde4461be7"
+            },
+            "icon": "",
+            "main": {
+              "darwin-arm64": "pramadani_osm_distribution_plugin.dylib",
+              "linux-amd64": "pramadani_osm_distribution_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_distribution",
+            "optional_dependencies": [
+              "lez_core"
+            ],
+            "type": "core",
+            "version": "0.1.0"
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_distribution-v0.1.0/pramadani_osm_distribution-0.1.0.lgx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pramadani_osm_consumer_module",
+      "versions": [
+        {
+          "releasedAt": "2026-11-27T12:35:02Z",
+          "publisherRef": "pramadani_osm_consumer_module-v0.1.2",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.2/pramadani_osm_consumer_module-0.1.2.lgx",
+          "size": 7818315,
+          "sha256": "0e18d6ecb7e5f31dd87233ca4882daf41d98d83b34e7fa434931bc7f07000c8a",
+          "rootHash": "e07c7633fd169ebe4cd338d6d4b3e78be94a00ba3447c5738896c87709c078d0",
+          "manifest": {
+            "author": "",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_sdk"
+            ],
+            "description": "Template: resolve an OSM region to its CID and metadata and download the verified file through pramadani_osm_sdk. Copy it, rename it, build your own idea on top.",
+            "display_name": "OSM consumer module (template)",
+            "hashes": {
+              "assets": "430309077511fd414eda14c8fc12046aae2afe9c0957d1b4226e1bcb78a28989",
+              "root": "e07c7633fd169ebe4cd338d6d4b3e78be94a00ba3447c5738896c87709c078d0",
+              "variants": "0c2c2d12093afee06e5f5a2bed35b7913f989b4647ad651f8672549a4af8d1b6",
+              "variants/darwin-arm64": "756c627dbcc84d1bbcd0d531355edbba16b49718b326f440183319ceb577bd47",
+              "variants/linux-amd64": "bf1413972660ebb0f89528829f0f61192bb0bacb3b29e91ab6296eac126eff14"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_module_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_module_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_module",
+            "type": "core",
+            "version": "0.1.2"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+            "linkedDids": [],
+            "signature": "ipQThWQBiLKDFxOX6bLD5ltpGHOBt+Hl1zA5PUGCAW2KfumppAxoKMOsj1POBL3asioWE8BHvPjocxXYs49AAA==",
+            "signer": {},
+            "version": 1
+          },
+          "icon": {
+            "path": "62dd8832321a705cecc81e0222bee70fe32d03b30219ee0fc4a8a0f5c6e9a190.png",
+            "sha256": "62dd8832321a705cecc81e0222bee70fe32d03b30219ee0fc4a8a0f5c6e9a190",
+            "size": 14608
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.2/pramadani_osm_consumer_module-0.1.2.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T07:53:59Z",
+          "publisherRef": "pramadani_osm_consumer_module-v0.1.1",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.1/pramadani_osm_consumer_module-0.1.1.lgx",
+          "size": 7813859,
+          "sha256": "326359f2cf2cedba070f80ece3be3773f0f01caa263b72ce1131ef0fe27e401f",
+          "rootHash": "7b2b2535129029edbfabd18cfbf2559f1657b2e480f32c848f3392468255566c",
+          "manifest": {
+            "author": "",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_sdk"
+            ],
+            "description": "Template: resolve an OSM region to its CID and metadata and download the verified file through pramadani_osm_sdk. Copy it, rename it, build your own idea on top.",
+            "display_name": "OSM consumer module (template)",
+            "hashes": {
+              "assets": "5b1f740c950b84ab7a1b607af26b4e6a284a81b0e397a48e1300df5bbbb8010e",
+              "root": "7b2b2535129029edbfabd18cfbf2559f1657b2e480f32c848f3392468255566c",
+              "variants": "e5967c87790437640e3cda82eb15d9b00295250a3557a2cd6cca34ff4a30ef16",
+              "variants/darwin-arm64": "50a8d2ae70630a5e4d9758f29cc11dd1c61e279f1086a19753daf58e1e780c36",
+              "variants/linux-amd64": "2e85ce76ac7a81b6991ae6ecdf580496599eeef552f0bed5d552916fc4c4595e"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_module_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_module_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_module",
+            "type": "core",
+            "version": "0.1.1"
+          },
+          "icon": {
+            "path": "62dd8832321a705cecc81e0222bee70fe32d03b30219ee0fc4a8a0f5c6e9a190.png",
+            "sha256": "62dd8832321a705cecc81e0222bee70fe32d03b30219ee0fc4a8a0f5c6e9a190",
+            "size": 14608
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.1/pramadani_osm_consumer_module-0.1.1.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T04:05:06Z",
+          "publisherRef": "pramadani_osm_consumer_module-v0.1.0",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.0/pramadani_osm_consumer_module-0.1.0.lgx",
+          "size": 7799445,
+          "sha256": "98e3d2482cc63037d3921bc777c7fb2f1649ad9c9ec317876a570f2468df65f9",
+          "rootHash": "970a8685dc45f6e61bce7f8b69a5e14da8782b93796dac1dff54afa135cfd267",
+          "manifest": {
+            "author": "",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_sdk"
+            ],
+            "description": "Template: resolve an OSM region to its CID and metadata and download the verified file through pramadani_osm_sdk. Copy it, rename it, build your own idea on top.",
+            "display_name": "OSM consumer module (template)",
+            "hashes": {
+              "assets": "6c113efbcd535ca99ce3833906c998c02be2ae1d151d0b8e876d3f433b59ead7",
+              "root": "970a8685dc45f6e61bce7f8b69a5e14da8782b93796dac1dff54afa135cfd267",
+              "variants": "5244f8d2e172caa08d5f199bf08e08a63f68065c1d6d018ca3a5a1cd8f9911c1",
+              "variants/darwin-arm64": "150e9ca46f6b315b7b92682bca4021936deccd39394caf7e893233679737f0af",
+              "variants/linux-amd64": "96e49a2bf5fd7974adf69685801f17d802e9c421040de0718e98cdc7f7265356"
+            },
+            "icon": "",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_module_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_module_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_module",
+            "type": "core",
+            "version": "0.1.0"
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_module-v0.1.0/pramadani_osm_consumer_module-0.1.0.lgx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pramadani_osm_consumer_app",
+      "versions": [
+        {
+          "releasedAt": "2026-11-27T12:35:45Z",
+          "publisherRef": "pramadani_osm_consumer_app-v0.1.2",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.2/pramadani_osm_consumer_app-0.1.2.lgx",
+          "size": 7866538,
+          "sha256": "e1f8e3f6ce9c57199c9fa3a12cbc7761b6ebbb82a6244be660efae3353a8dad5",
+          "rootHash": "1acce2794d62a2f2b1090cdb627b749608fe0c4ae26dfd8991d99a19c73a9475",
+          "manifest": {
+            "author": "",
+            "backend": "pramadani_osm_consumer_app_backend",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Template: pick a region, see its registered snapshot, download and verify it, through pramadani_osm_distribution. Copy it and build your own app.",
+            "display_name": "OSM consumer app (template)",
+            "hashes": {
+              "assets": "63224292d57815095b97861a789a1999ec3affb3a7a24b96608eeaa1b8f7f8af",
+              "root": "1acce2794d62a2f2b1090cdb627b749608fe0c4ae26dfd8991d99a19c73a9475",
+              "variants": "5044789cadfd055b03982de478c948f8f958736bcf002e04b928a2c42aba0577",
+              "variants/darwin-arm64": "07b1f23488f18fa816018162ad01e60fb359a093e7e44726db1eeb1d70ea58ff",
+              "variants/linux-amd64": "09319b65df5e30fab818a2bf8a01c173af498e1693d07d679188f622106aa5d1"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_app",
+            "type": "ui_qml",
+            "version": "0.1.2",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+            "linkedDids": [],
+            "signature": "6onurTpcJkIaKwl+zgNXoxKDeA2B8FxH+gkPYtGPw51zt5LDRIRGEJU0ivlVhfZzCp9AABP26jLBpaExeYsJAQ==",
+            "signer": {},
+            "version": 1
+          },
+          "icon": {
+            "path": "a46fe27fee1e50233df72230d448be61f7ffdc2303698f30695a12d7ddcea92e.png",
+            "sha256": "a46fe27fee1e50233df72230d448be61f7ffdc2303698f30695a12d7ddcea92e",
+            "size": 10209
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.2/pramadani_osm_consumer_app-0.1.2.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T07:50:24Z",
+          "publisherRef": "pramadani_osm_consumer_app-v0.1.1",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.1/pramadani_osm_consumer_app-0.1.1.lgx",
+          "size": 7858234,
+          "sha256": "b1f44ef07e799d66065ed54c947124f98c2cb7068cd25e17be0a88577db43545",
+          "rootHash": "f078e5612954b8726400a001996cb8ede7109510e081ab9f01d98d3b4e3ab6ef",
+          "manifest": {
+            "author": "",
+            "backend": "pramadani_osm_consumer_app_backend",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Template: pick a region, see its registered snapshot, download and verify it, through pramadani_osm_distribution. Copy it and build your own app.",
+            "display_name": "OSM consumer app (template)",
+            "hashes": {
+              "assets": "6fa538b9acd5e1274ea616ac79fd9f9a228f1fba762a1a4c7d2038b813167b75",
+              "root": "f078e5612954b8726400a001996cb8ede7109510e081ab9f01d98d3b4e3ab6ef",
+              "variants": "d6cf6a07b51fbd267891a98cde3b88ff7cea85824913549b04d23fc03db72769",
+              "variants/darwin-arm64": "9a87dbc665b94ebcdfc1467da43246d2c8605af8c263b79f98b09c4cf4f04edd",
+              "variants/linux-amd64": "3a25ea41ce5ebb795fe3965d33122136869a2eb95175ddd83f387e090afad7cc"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_app",
+            "type": "ui_qml",
+            "version": "0.1.1",
+            "view": "qml/Main.qml"
+          },
+          "icon": {
+            "path": "a46fe27fee1e50233df72230d448be61f7ffdc2303698f30695a12d7ddcea92e.png",
+            "sha256": "a46fe27fee1e50233df72230d448be61f7ffdc2303698f30695a12d7ddcea92e",
+            "size": 10209
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.1/pramadani_osm_consumer_app-0.1.1.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T04:09:35Z",
+          "publisherRef": "pramadani_osm_consumer_app-v0.1.0",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.0/pramadani_osm_consumer_app-0.1.0.lgx",
+          "size": 7826264,
+          "sha256": "d7a0f994c30bd9a5c091a6b8c3679e99ea0d625a2881385e2fc0541fc9fa0f13",
+          "rootHash": "db4d58901c19ff913746bad58c1c818e4845bb84287cf8103a814cd84c3ad1c4",
+          "manifest": {
+            "author": "",
+            "backend": "pramadani_osm_consumer_app_backend",
+            "category": "example",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Template: pick a region, see its registered snapshot, download and verify it, through pramadani_osm_distribution. Copy it and build your own app.",
+            "display_name": "OSM consumer app (template)",
+            "hashes": {
+              "assets": "d6f317b56c60d10740654dc8f2583aecbdeafa4e9c0269adaf24f909f7989715",
+              "root": "db4d58901c19ff913746bad58c1c818e4845bb84287cf8103a814cd84c3ad1c4",
+              "variants": "2005e8827a320a685876310fdc4c2cb3044a99be6c7cae556896396ce327fc79",
+              "variants/darwin-arm64": "3bd407719a73698adb42ae9f1811f9a3b8bb2c34b0eb58ae5f50c7ad9c7f1e2b",
+              "variants/linux-amd64": "371bedd7ddf4337f1fd1037f82e699d93686674cc1f781453562f7d824c86a83"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_consumer_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_consumer_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_consumer_app",
+            "type": "ui_qml",
+            "version": "0.1.0",
+            "view": "qml/Main.qml"
+          },
+          "icon": {
+            "path": "3b48993d923d141b47ab1c57fe0c6f4acfe0274af193ebed2acc6c201c84adbd.png",
+            "sha256": "3b48993d923d141b47ab1c57fe0c6f4acfe0274af193ebed2acc6c201c84adbd",
+            "size": 2265
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_consumer_app-v0.1.0/pramadani_osm_consumer_app-0.1.0.lgx"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pramadani_osm_app",
+      "versions": [
+        {
+          "releasedAt": "2026-11-27T12:36:57Z",
+          "publisherRef": "pramadani_osm_app-v0.1.3",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.3/pramadani_osm_app-0.1.3.lgx",
+          "size": 7914291,
+          "sha256": "f176f85af5710a0aedb94d9ca9afb0727bbbca59bae674e75c3429661c3a292a",
+          "rootHash": "4ddef23f72cc785ea398c9fe76e54e3ba7fb1722a5b6305b9f56fe6b7df9a2ab",
+          "manifest": {
+            "author": "pramadanif",
+            "backend": "pramadani_osm_app_backend",
+            "category": "maps",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Discover, host, import, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Maps (LP-0018)",
+            "hashes": {
+              "assets": "40464a8526d6b5c37b0961342f1f8160196efa3657a4523f6bc20d7f54b326f0",
+              "root": "4ddef23f72cc785ea398c9fe76e54e3ba7fb1722a5b6305b9f56fe6b7df9a2ab",
+              "variants": "820a0a83da60dfe29feabeae6aab7eef1d9b4ed13449b1191d1fcd59dcc96de1",
+              "variants/darwin-arm64": "84e6a13b9da4f492309dd87c06bbf700815b1a609196c712376cd908bbd782be",
+              "variants/linux-amd64": "18a409fa51486304b3af5e9de4aff8f548b72982295f7efdbbe454e8424231e6"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_app",
+            "type": "ui_qml",
+            "version": "0.1.3",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6ImxkcmZVLWIzNkdyWlhSbGZUbkpDbng4X1hmN3hUY2JCQUszRFpnN2dQaFUifQ",
+            "linkedDids": [],
+            "signature": "PIG1kXnTm4ATER7mYwcPZu09Etg6OEzuuSpt6lOyOfH2AcCPj0r8J2RglNjBugu1yUrbC0C0hsEzkpOYqORtBA==",
+            "signer": {},
+            "version": 1
+          },
+          "icon": {
+            "path": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea.png",
+            "sha256": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea",
+            "size": 12051
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.3/pramadani_osm_app-0.1.3.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T07:48:17Z",
+          "publisherRef": "pramadani_osm_app-v0.1.2",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.2/pramadani_osm_app-0.1.2.lgx",
+          "size": 7888389,
+          "sha256": "3cb56bc42c97e2ddd33bea3322f34b558392a1563fd8137fbcde4d669e506375",
+          "rootHash": "6f1856a4a0194a78c4291b435fdb411f8eef5f4fd95e8809a80e459e4a80ee2b",
+          "manifest": {
+            "author": "pramadanif",
+            "backend": "pramadani_osm_app_backend",
+            "category": "maps",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Discover, host, import, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Maps (LP-0018)",
+            "hashes": {
+              "assets": "57495b5bde753d369ba8566bbdeab4a229ad88b238fe0bd147fd60390d5253e5",
+              "root": "6f1856a4a0194a78c4291b435fdb411f8eef5f4fd95e8809a80e459e4a80ee2b",
+              "variants": "b5fe214b8ecf05de5f00aee1ec295671821241a947aa3ef7c2c49919bbf71b9b",
+              "variants/darwin-arm64": "b6d7aeabfb8c6d6645fade89ecc86e05e446e9c543f5b26861424e0c6167af2f",
+              "variants/linux-amd64": "af141a5b5e918adaec6c0fae5d4cd3b4d4c954d2f6b940454cd62fe7820f207b"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_app",
+            "type": "ui_qml",
+            "version": "0.1.2",
+            "view": "qml/Main.qml"
+          },
+          "icon": {
+            "path": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea.png",
+            "sha256": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea",
+            "size": 12051
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.2/pramadani_osm_app-0.1.2.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T06:18:07Z",
+          "publisherRef": "pramadani_osm_app-v0.1.1",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.1/pramadani_osm_app-0.1.1.lgx",
+          "size": 7873771,
+          "sha256": "cd93b09708a36d031cbc94d9a64ea20b7c1bb6cf55633d994d52957956db7f14",
+          "rootHash": "dfdd0e22468633e4c241b101ff198c97e73be4a7a73c6b46f9b20e5cf104d532",
+          "manifest": {
+            "author": "pramadanif",
+            "backend": "pramadani_osm_app_backend",
+            "category": "maps",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Discover, host, import, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Maps (LP-0018)",
+            "hashes": {
+              "assets": "528ae630b6acc794719193af12c6112dca5f4890eba8dfb31bfff099bde9111f",
+              "root": "dfdd0e22468633e4c241b101ff198c97e73be4a7a73c6b46f9b20e5cf104d532",
+              "variants": "1249bb7710bd91bdf2c3c4741a01f2beba8c3a8d8bf9b99c98cc153972128598",
+              "variants/darwin-arm64": "b0cdd4d3535b118696236e3bf47168bfbafd121a16f1c0f99cd433bd08abcceb",
+              "variants/linux-amd64": "6d871cc7bb34aae3ba88265440fe24904cf7a2974b314cbc62b698ac42ef439f"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_app",
+            "type": "ui_qml",
+            "version": "0.1.1",
+            "view": "qml/Main.qml"
+          },
+          "icon": {
+            "path": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea.png",
+            "sha256": "eb400412013d7ea73d7497f10399e3a6d1ef2a87e425855c4c71998cd7468cea",
+            "size": 12051
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.1/pramadani_osm_app-0.1.1.lgx"
+          ]
+        },
+        {
+          "releasedAt": "2026-11-23T04:03:35Z",
+          "publisherRef": "pramadani_osm_app-v0.1.0",
+          "url": "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.0/pramadani_osm_app-0.1.0.lgx",
+          "size": 7840089,
+          "sha256": "2af62dcc0a2d708365545e505e26cbd409dfb7de4503d74f2a20eac3edb2edce",
+          "rootHash": "50317d4d9ac1f0cc1e83a33549df7badeabe996e05a28ef35f37ec58dec0fa1e",
+          "manifest": {
+            "author": "pramadanif",
+            "backend": "pramadani_osm_app_backend",
+            "category": "maps",
+            "dependencies": [
+              "pramadani_osm_distribution"
+            ],
+            "description": "Discover, host, import, download and verify OpenStreetMap snapshots registered on the Logos Execution Zone and stored in Logos Storage (LP-0018).",
+            "display_name": "OSM Maps (LP-0018)",
+            "hashes": {
+              "assets": "d6f317b56c60d10740654dc8f2583aecbdeafa4e9c0269adaf24f909f7989715",
+              "root": "50317d4d9ac1f0cc1e83a33549df7badeabe996e05a28ef35f37ec58dec0fa1e",
+              "variants": "950095bcb9d663e9b745316ed69d51a7504e05eb5e4c3a214b4434fcea8f0326",
+              "variants/darwin-arm64": "197bb3a28d9d6aab05bf6b883fe73729d87c8345329572c9a277627f9a05daa7",
+              "variants/linux-amd64": "5bd14b43c98e61fec046c6204babc0ecd4942951950a4ceced18b83c9433be4e"
+            },
+            "icon": "assets/icon.png",
+            "main": {
+              "darwin-arm64": "pramadani_osm_app_backend_plugin.dylib",
+              "linux-amd64": "pramadani_osm_app_backend_plugin.so"
+            },
+            "manifestVersion": "0.7.0",
+            "name": "pramadani_osm_app",
+            "type": "ui_qml",
+            "version": "0.1.0",
+            "view": "qml/Main.qml"
+          },
+          "icon": {
+            "path": "3b48993d923d141b47ab1c57fe0c6f4acfe0274af193ebed2acc6c201c84adbd.png",
+            "sha256": "3b48993d923d141b47ab1c57fe0c6f4acfe0274af193ebed2acc6c201c84adbd",
+            "size": 2265
+          },
+          "urls": [
+            "https://github.com/pramadanif/pramadani-osm-modules/releases/download/pramadani_osm_app-v0.1.0/pramadani_osm_app-0.1.0.lgx"
+          ]
+        }
+      ]
+    }
+  ]
+}
